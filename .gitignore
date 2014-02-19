@@ -1,0 +1,8 @@
+.classpath
+.externalToolBuilders/
+.gradle/
+.project
+.settings/
+bin/
+build/
+ClipboardApplet.jar
