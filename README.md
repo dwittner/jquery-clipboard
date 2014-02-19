@@ -22,7 +22,7 @@ $('input').on("paste", function (event) {
 });
 ```
 
-### Write to the clipboard - `setData(data)`
+### Write to the clipboard - *setData(data)*
 
 Writing to the clipboard is only allowed in internet explorer. Thus you need workarounds for all other browsers.  
 **jquery-clipboard** provides 3 ways to write to the clipboard.
