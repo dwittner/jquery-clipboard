@@ -1,0 +1,35 @@
+/*
+// Pull the gradle-js-plugin from Maven Central
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.eriwen:gradle-js-plugin:1.9.0'
+    }
+}
+
+apply plugin: 'js'
+*/
+apply plugin: 'java'
+apply plugin: 'eclipse'
+	
+
+/*
+minifyJs {
+    source = combineJs
+    dest = file("${buildDir}/libs/jquery-clipboard.min.js")
+    //sourceMap = file("${buildDir}/all.sourcemap.json")
+    closure {
+        warningLevel = 'QUIET'
+    }
+}
+*/
+
+jar {
+	baseName = 'ClipboardApplet'
+	destinationDir = file("${projectDir}")
+	manifest {
+		attributes 'Permissions': 'all-permissions', 'Application-Name': 'ClipboardApplet'
+	}
+}
