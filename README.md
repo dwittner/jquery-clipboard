@@ -6,7 +6,7 @@ Internet Explorer allows access to the system clipboard via the object **window.
 The way you can read the content of the clipboard differs slightly for other browsers, but is also an easy task. Writing to the
 clipboard  
 
-### Get the content of the clipboard - `getData(event)`
+### Get the content of the clipboard - *getData(event)*
 
 All you have to do is to register a
 paste handler and to read the content from the propery **clipboardData** of the passed event object.
@@ -39,7 +39,7 @@ Additionally to the basic functions provided by the object **$.clipboard**, the 
 which can be called on selected jQuery elements.
 
 
-### `pasteAll(pasteHandler)`
+### *pasteAll(pasteHandler)*
 
 What the method does is, it registers the given `pasteHandler` to the paste event of all selected elements, indirectly.
 Indirectly means, that in fact another handler is registered, which calls the given `pasteHandler` for every selected element.
