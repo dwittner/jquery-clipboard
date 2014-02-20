@@ -4,14 +4,11 @@ This jQuery plugin provides the object **$.clipboard** for standardizing copy & 
 
 Internet Explorer allows access to the system clipboard via the object **window.clipboard** in both directions, reading and writing.
 The way you can read the content of the clipboard differs slightly for other browsers, but is also an easy task. Writing to the
-clipboard  
+clipboard is more or less impossible with pure JavaScript. Therefore you have to use workarounds to circumvent that restriction.
 
 ### Get the content of the clipboard - *getData(event)*
 
-All you have to do is to register a
-paste handler and to read the content from the propery **clipboardData** of the passed event object.
-
-In order you don't have to bother yourself with the different ways of reading the clipboard content, **jquery-clipboard** provides 
+In order that you don't have to bother yourself with the different ways of reading the clipboard content, **jquery-clipboard** provides 
 the method **$.clipboard.getData**. The method is intended to be used in a paste handler, therefore it expects the event object passed
 as param. It can be used as follows
 
@@ -24,13 +21,43 @@ $('input').on("paste", function (event) {
 
 ### Write to the clipboard - *setData(data)*
 
-Writing to the clipboard is only allowed in internet explorer. Thus you need workarounds for all other browsers.  
-**jquery-clipboard** provides 3 ways to write to the clipboard.
+**jquery-clipboard** provides 3 different ways to write to the clipboard.
 
 1. **window.clipboard.setData** for internet explorer
 1. an applet to circumvent the restriction (if configured)
 1. a textarea with the content to be copied and user copy action (CTRL+C) as fallback
 
+If the used browser is an internet explorer, **jquery-clipboard** just uses **window.clipboard.setData** to write the data to the
+clipboard. If the browser isn't an internet explorer and you haven't configured the **ClipboardApplet**, or it isn't working for some
+reason, a textarea is displayed with the data, which is to be written to the clipboard, already selected. The user now can press **CTRL+C**,
+or use *copy* from the menu or popup menue, to write the data to the clipboard. The textarea disappears in the moment it looses the focus.
+The displayed textarea represents a fallback solution, which should function for all browsers. 
+
+
+#### ClipboardApplet
+
+Sign **ClipboardApplet.jar** with a trusted certificate.
+
+```
+jarsigner -keystore <KEYSTORE> ClipboardApplet.jar <ALIAS>
+```
+
+```html
+<script src="http://java.com/js/deployJava.js"></script>
+```	
+
+```javascript
+$.clipboard.initApplet("../../ClipboardApplet.jar");
+```
+
+#### Why isn't the Flash workaround supported?
+
+First of all the applet workaround is **now** safer than the Flash version. Thanks to the detected vulnerabilities in Java
+in the last times, the security requirements for applets were increased. That means applets have to be signed with a trusted
+certificate. That's why the applet workaround should be the preferred solution for business applications. But as long as
+internet explorer supports the unsafe way to write data to the clipboard, it is difficult to argue that way and for sure there
+are application, for which writing to the clipboard the unsafe way is not an issue. Hence it could be that the plugin will support
+the flash workaround someday too.
 
 
 ## High Level API
