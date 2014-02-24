@@ -1,4 +1,4 @@
-This jQuery plugin provides the object **$.clipboard** for standardizing copy & paste functionality in browsers.
+This jQuery plugin provides the object **$.clipboard** for unified copy & paste functionality in browsers.
 
 ## Low Level API
 
