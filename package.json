@@ -2,7 +2,12 @@
   "name": "jquery-clipboard",
   "version": "1.0.0",
   "description": "This jQuery plugin provides the object **$.clipboard** for unified copy & paste functionality in browsers.",
-  "main": "jquery-clipboard.js",
+  "files": [
+    "jquery-clipboard.js",
+    "ClipboardApplet.jar",
+    "LICENSE",
+    "demos"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
