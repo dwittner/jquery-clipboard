@@ -1,6 +1,6 @@
 /**
  * jquery-clipboard
- * 
+ *
  * (c) 2014 Daniel Wittner <d.wittner@gmx.de>
  */
 (function($) {
@@ -27,7 +27,7 @@
 
 	var clipboard = {
 
-		initApplet : function(urlOfJarFile) {
+		initApplet : function(file) {
 
 			if (window.clipboardData) {
 				return;
@@ -36,7 +36,7 @@
 			var attributes = {
 				id : 'clipboardApplet',
 				code : 'org.clipboardapplet.ClipboardApplet.class',
-				archive : urlOfJarFile || 'ClipboardApplet.jar',
+				archive : file || 'ClipboardApplet.jar',
 				width : 0,
 				height : 0
 			};
@@ -74,7 +74,7 @@
 					: event.originalEvent.clipboardData.getData('Text');
 		}
 	};
-	
+
 	$.clipboard = clipboard;
 
 	$.fn.pasteAll = function(pasteHandler) {

@@ -1,0 +1,25 @@
+{
+  "name": "jquery-clipboard",
+  "version": "1.0.0",
+  "description": "This jQuery plugin provides the object **$.clipboard** for unified copy & paste functionality in browsers.",
+  "main": "jquery-clipboard.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dwittner/jquery-clipboard.git"
+  },
+  "keywords": [
+    "jquery-plugin"
+  ],
+  "author": "Daniel Wittner",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dwittner/jquery-clipboard/issues"
+  },
+  "homepage": "https://github.com/dwittner/jquery-clipboard",
+  "dependencies": {
+    "jquery": ">=1.3"
+  }
+}
