@@ -51,6 +51,8 @@ The following steps are needed to use the **ClipboardApplet**:
 ### 1. Sign **ClipboardApplet.jar** with a trusted certificate.
 More about the Why and How is explained here: [Java Applet & Web Start - Code Signing](http://www.oracle.com/technetwork/java/javase/tech/java-code-signing-1915323.html)
 
+Before signing the applet, it is recommended to modify the values of the arributes **Codebase**, **Application-Library-Allowable-Codebase** and **Caller-Allowable-Codebase** in the **MANIFEST.MF** file inside of the **ClipboardApplet.jar** file for your needs, to further increase the security (see [JAR File Manifest Attributes for Security](http://docs.oracle.com/javase/8/docs/technotes/guides/deploy/manifest.html)).
+
 ### 2. Load deployJava.js file
 ```html
 <script src="http://java.com/js/deployJava.js"></script>

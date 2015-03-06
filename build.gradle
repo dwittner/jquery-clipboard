@@ -13,7 +13,7 @@ apply plugin: 'js'
 */
 apply plugin: 'java'
 apply plugin: 'eclipse'
-	
+
 
 /*
 minifyJs {
@@ -30,6 +30,10 @@ jar {
 	baseName = 'ClipboardApplet'
 	destinationDir = file("${projectDir}")
 	manifest {
-		attributes 'Permissions': 'all-permissions', 'Application-Name': 'ClipboardApplet'
+		attributes('Permissions': 'all-permissions',
+		           'Application-Name': 'ClipboardApplet',
+		           'Codebase': '*',
+		           'Application-Library-Allowable-Codebase': '*',
+		           'Caller-Allowable-Codebase': '*')
 	}
 }
