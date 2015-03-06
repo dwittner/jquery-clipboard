@@ -4,6 +4,7 @@
   "description": "This jQuery plugin provides the object **$.clipboard** for unified copy & paste functionality in browsers.",
   "files": [
     "jquery-clipboard.js",
+    "jquery-clipboard.min.js",
     "ClipboardApplet.jar",
     "LICENSE",
     "demos"
