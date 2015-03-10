@@ -10,10 +10,7 @@ buildscript {
 }
 
 apply plugin: 'js'
-
 apply plugin: 'java'
-apply plugin: 'eclipse'
-
 
 
 minifyJs {
@@ -23,7 +20,6 @@ minifyJs {
         warningLevel = 'QUIET'
     }
 }
-
 
 jar {
 	baseName = 'ClipboardApplet'
@@ -36,3 +32,5 @@ jar {
 		           'Caller-Allowable-Codebase': '*')
 	}
 }
+
+build.dependsOn minifyJs

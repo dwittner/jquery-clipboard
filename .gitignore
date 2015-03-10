@@ -1,8 +1,5 @@
-.classpath
-.externalToolBuilders/
 .gradle/
-.project
-.settings/
 bin/
 build/
+node_modules/
 ClipboardApplet.jar

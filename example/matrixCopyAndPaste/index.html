@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Copy & Paste Matrix</title>
+<link rel="stylesheet" type="text/css" href="matrixCopyAndPaste.css" />
+</head>
+
+<body>
+	<script src="http://java.com/js/deployJava.js"></script>
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="../../jquery-clipboard.js"></script>
+	<script src="matrixCopyAndPaste.js"></script>
+	<script>
+	    $.clipboard.initApplet("../../ClipboardApplet.jar");
+		$('document').ready(function() {
+			matrixCopyAndPaste.distributePaste($('input'), matrixCopyAndPaste.pasteHandler);
+			$('#copyButton').click(matrixCopyAndPaste.copyHandler);
+			$('#pasteButton').click(function () {
+				$('textarea').val($.clipboard.getData());
+			});
+		});
+	</script>
+	<h1>Copy & Paste Matrix</h1>
+	<ol>
+	  <li>
+	    Click the <strong>Copy</strong> button to copy the content of the matrix.
+	  </li>
+	  <li>
+	    Afterwards you can click into a field of the matrix and paste the content back to the matrix via <strong>CTRL+V</strong>.
+	    But don't be surprised. The values are multiplied by 10.
+	  </li>
+	  <li>
+	    Use the <strong>Paste</strong> button to paste the content of the clipboard into the textarea.
+	  </li>
+	  </ol>
+		<p>
+		  If you are using a browser other than internet explorer, the fallback textarea will be displayed to copy the text via <strong>CTRL+C</strong>.
+		  Download the example and sign the applet, if you want to copy without the fallback textarea.
+		</p>
+		<p>The <strong>Paste</strong> button only works for browsers other than internet explorer,
+		  if you download the example and sign the applet!
+		</p>
+	<form action="#">
+		<table>
+			<tbody>
+				<tr>
+					<td><input type="text" id="field_1_1" value="10" /></td>
+					<td><input type="text" id="field_1_2" value="20" /></td>
+					<td><input type="text" id="field_1_3" value="30" /></td>
+				</tr>
+				<tr>
+					<td><input type="text" id="field_2_1" value="40" /></td>
+					<td><input type="text" id="field_2_2" value="50" /></td>
+					<td><input type="text" id="field_2_3" value="60" /></td>
+				</tr>
+				<tr>
+					<td><input type="text" id="field_3_1" value="70" /></td>
+					<td><input type="text" id="field_3_2" value="80" /></td>
+					<td><input type="text" id="field_3_3" value="90" /></td>
+				</tr>
+			</tbody>
+		</table>
+		<button type="button" id="copyButton">Copy</button><br>
+		<textarea rows="3" cols="52"></textarea>
+		<button type="button" id="pasteButton">Paste</button>
+	</form>
+
+</body>
+
+</html>
