@@ -18,6 +18,7 @@
 			$('#pasteButton').click(function () {
 				$('textarea').val($.clipboard.getData());
 			});
+			$('textarea').outerWidth($('table').outerWidth());
 		});
 	</script>
 	<h1>Copy & Paste Matrix</h1>
@@ -61,7 +62,7 @@
 			</tbody>
 		</table>
 		<button type="button" id="copyButton">Copy</button><br>
-		<textarea rows="3" cols="52"></textarea>
+		<textarea rows="3" cols="50"></textarea>
 		<button type="button" id="pasteButton">Paste</button>
 	</form>
 

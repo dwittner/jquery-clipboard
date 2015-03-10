@@ -25,8 +25,13 @@ ol {
     padding-left: 15px;
 }
 
+input {
+	width: 100px;
+}
+
 table {
-	display: inline;
+	border: 1px solid lightgrey;
+	display: inline-block;
 }
 
 button {
