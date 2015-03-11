@@ -72,4 +72,4 @@ The displayed textarea represents a fallback solution, which should work for all
 
 ### Example
 
-[Matrix Copy & Paste](http://dwittner.github.io/jquery-clipboard/example/matrixCopyAndPaste/index.html)
+[Copy & Paste Matrix](http://dwittner.github.io/jquery-clipboard/example/matrixCopyAndPaste/index.html)
