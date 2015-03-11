@@ -11,7 +11,7 @@
 	<script src="../../jquery-clipboard.js"></script>
 	<script src="matrixCopyAndPaste.js"></script>
 	<script>
-	    $.clipboard.initApplet("../../ClipboardApplet.jar");
+	    $.clipboard.initApplet("ClipboardApplet_self_signed_cert.jar");
 		$('document').ready(function() {
 			matrixCopyAndPaste.distributePaste($('input'), matrixCopyAndPaste.pasteHandler);
 			$('#copyButton').click(matrixCopyAndPaste.copyHandler);
