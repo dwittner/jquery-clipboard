@@ -4,5 +4,7 @@ module.exports = {
         host: "localhost",
         port: 1111,
         runPhantom: true
-    }
+    },
+
+    logLevel: "none"
 };

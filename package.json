@@ -10,7 +10,7 @@
     "demos"
   ],
   "scripts": {
-    "test": "node_modules/.bin/buster-ci --reporter specification"
+    "test": "node node_modules/buster/bin/buster-ci --reporter specification"
   },
   "repository": {
     "type": "git",
