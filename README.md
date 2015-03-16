@@ -1,3 +1,5 @@
+[![Build status](https://secure.travis-ci.org/dwittner/jquery-clipboard.png?branch=master)](http://travis-ci.org/dwittner/jquery-clipboard)
+
 This jQuery plugin provides the object **$.clipboard** for unified copy & paste functionality in browsers.
 
 Internet Explorer allows access to the system clipboard via the object **window.clipboard** in both directions, reading and writing.
